@@ -1,19 +1,5 @@
 @import "variables";
 
-:root {
-    --background-color: #{$darkColor};
-    --text-color: #{$lightColor};
-    --search-color: #{$darkSearchColor};
-    --hover-color: #{$darkLinkHover};
-}
-
-.light {
-    --background-color: #{$lightColor};
-    --text-color: #{$darkColor};
-    --search-color: #{$lightColor};
-    --hover-color: #{$darkColor};
-}
-  
 *, *::after, *::before{
     margin: 0;
     padding: 0;
@@ -21,14 +7,37 @@
 }
 
 body{
+    --background-color: #{$lightColor};
+    --text-color: #{$darkColor};
+    --search-color: #{$lightColor};
+    --hover-color: #{$darkColor};
+    --card-box-shadow: #{$lightCardBoxShadow};
+    --input-box-shadow: #{$lightInputBoxShadow};
+    --icon-color: #{$lightIconColor};
     font-family: $bodyFont;
     background-color: var(--background-color);
-    .iconify{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
+    button{
+        outline: none;
+        background: transparent;
+        border: none;
+        .iconify{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: var(--icon-color);
+        }
+    }  
+}
+
+.dark {
+    --background-color: #{$darkColor};
+    --text-color: #{$lightColor};
+    --search-color: #{$darkSearchColor};
+    --hover-color: #{$darkLinkHover};
+    --card-box-shadow: #{$darkCardBoxShadow};
+    --input-box-shadow: #{$darkInputBoxShadow};
+    --icon-color: #{$darkIconColor};
 }
 
 .container{
@@ -62,7 +71,7 @@ main{
             font-size: 1.4rem;
             background-color: var(--search-color);
             transition: .2s ease-out;
-            box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
+            box-shadow: var(--input-box-shadow);
             &:focus{
                 width: 900px;
             }
@@ -82,7 +91,7 @@ main{
             justify-content: center;
             align-items: center;
             gap: 20px;
-            box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
+            box-shadow: var(--card-box-shadow);
             h1{
                 font-size: 30px;
                 font-weight: 600;
@@ -94,6 +103,7 @@ main{
                 flex-direction: column;
                 gap: 5px;
                 li{
+                    text-align: center;
                     font-size: 24px;
                     font-weight: 400;
                     color: var(--text-color);
@@ -113,3 +123,5 @@ main{
         }
     }
 }
+
+  

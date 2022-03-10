@@ -1,18 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-:root {
-  --background-color: #2d2d2d;
-  --text-color: #fbfbfb;
-  --search-color: #2f2f2f;
-  --hover-color: rgba(255, 255, 255, 0.9);
-}
-
-.light {
-  --background-color: #fbfbfb;
-  --text-color: #2d2d2d;
-  --search-color: #fbfbfb;
-  --hover-color: #2d2d2d;
-}
-
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -21,15 +7,39 @@
 }
 
 body {
+  --background-color: #fbfbfb;
+  --text-color: #2d2d2d;
+  --search-color: #fbfbfb;
+  --hover-color: #2d2d2d;
+  --card-box-shadow: -7px 7px 14px rgba(218, 218, 218, 0.2), 7px -7px 14px rgba(218, 218, 218, 0.2), -7px -7px 14px rgba(255, 255, 255, 0.9), 7px 7px 18px rgba(218, 218, 218, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(218, 218, 218, 0.5);
+  --input-box-shadow: -4px 4px 8px rgba(186, 186, 186, 0.2), 4px -4px 8px rgba(186, 186, 186, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(186, 186, 186, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(186, 186, 186, 0.5);
+  --icon-color: #2d2d2d;
   font-family: Rubik, sans-serif;
   background-color: var(--background-color);
 }
 
-body .iconify {
+body button {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+body button .iconify {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
+  color: var(--icon-color);
+}
+
+.dark {
+  --background-color: #2d2d2d;
+  --text-color: #fbfbfb;
+  --search-color: #2f2f2f;
+  --hover-color: rgba(255, 255, 255, 0.9);
+  --card-box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
+  --input-box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
+  --icon-color: #fbfbfb;
 }
 
 .container {
@@ -81,8 +91,8 @@ main form input {
   background-color: var(--search-color);
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
-  -webkit-box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
-          box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
+  -webkit-box-shadow: var(--input-box-shadow);
+          box-shadow: var(--input-box-shadow);
 }
 
 main form input:focus {
@@ -118,8 +128,8 @@ main .cards .card {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  -webkit-box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
-          box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
+  -webkit-box-shadow: var(--card-box-shadow);
+          box-shadow: var(--card-box-shadow);
 }
 
 main .cards .card h1 {
@@ -141,6 +151,7 @@ main .cards .card ul {
 }
 
 main .cards .card ul li {
+  text-align: center;
   font-size: 24px;
   font-weight: 400;
   color: var(--text-color);
