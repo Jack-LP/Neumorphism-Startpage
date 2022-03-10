@@ -20,11 +20,11 @@ body{
         outline: none;
         background: transparent;
         border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
         .iconify{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
             color: var(--icon-color);
         }
     }  
@@ -81,6 +81,7 @@ main{
         display: flex;
         gap: 26px;
         justify-content: center;
+        flex-wrap: wrap;
         .card{
             background-color: var(--background-color);
             width: 250px;
@@ -124,4 +125,37 @@ main{
     }
 }
 
-  
+@media only screen and (max-width: 850px) {
+    .container{
+        width: 50%;
+    }
+    
+    main{
+        form{
+            input{
+                width: 600px;
+                &:focus{
+                    width: 700px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    main{
+        margin-top: 400px;
+        form{
+            input{
+                width: 550px;
+                &:focus{
+                    width: 600px;
+                }
+            }
+        }
+        .cards{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

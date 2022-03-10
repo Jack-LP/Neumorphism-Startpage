@@ -22,13 +22,13 @@ body button {
   outline: none;
   background: transparent;
   border: none;
-}
-
-body button .iconify {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+body button .iconify {
   color: var(--icon-color);
 }
 
@@ -107,6 +107,8 @@ main .cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .cards .card {
@@ -170,5 +172,38 @@ main .cards .card ul li a:visited {
 
 main .cards .card ul li a:hover {
   color: var(--hover-color);
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    width: 50%;
+  }
+  main form input {
+    width: 600px;
+  }
+  main form input:focus {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  main {
+    margin-top: 400px;
+  }
+  main form input {
+    width: 550px;
+  }
+  main form input:focus {
+    width: 600px;
+  }
+  main .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
