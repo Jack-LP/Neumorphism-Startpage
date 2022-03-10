@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root {
+  --background-color: #2d2d2d;
+  --text-color: #fbfbfb;
+  --search-color: #2f2f2f;
+  --hover-color: rgba(255, 255, 255, 0.9);
+}
+
+.light {
+  --background-color: #fbfbfb;
+  --text-color: #2d2d2d;
+  --search-color: #fbfbfb;
+  --hover-color: #2d2d2d;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  background-color: var(--background-color);
+}
+
+body .iconify {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  row-gap: 80px;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main form input {
+  border: none;
+  outline: none;
+  width: 800px;
+  height: 57px;
+  border-radius: 50px;
+  padding: 0 25px;
+  font-family: Rubik, sans-serif;
+  color: var(--text-color);
+  caret-color: transparent;
+  font-size: 1.4rem;
+  background-color: var(--search-color);
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  -webkit-box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
+          box-shadow: 1px 1px 2px rgba(65, 65, 65, 0.3), -1px -1px 2px rgba(25, 25, 25, 0.5), inset -4px 4px 8px rgba(25, 25, 25, 0.2), inset 4px -4px 8px rgba(25, 25, 25, 0.2), inset -4px -4px 8px rgba(65, 65, 65, 0.9), inset 4px 4px 10px rgba(25, 25, 25, 0.9);
+}
+
+main form input:focus {
+  width: 900px;
+}
+
+main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 26px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .cards .card {
+  background-color: var(--background-color);
+  width: 250px;
+  height: 306px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
+          box-shadow: 1px 1px 2px rgba(54, 54, 54, 0.3), -1px -1px 2px rgba(36, 36, 36, 0.5), inset -7px 7px 14px rgba(36, 36, 36, 0.2), inset 7px -7px 14px rgba(36, 36, 36, 0.2), inset -7px -7px 14px rgba(54, 54, 54, 0.9), inset 7px 7px 18px rgba(36, 36, 36, 0.9);
+}
+
+main .cards .card h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+main .cards .card ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+main .cards .card ul li {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+main .cards .card ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+main .cards .card ul li a:visited {
+  color: inherit;
+}
+
+main .cards .card ul li a:hover {
+  color: var(--hover-color);
+}
+/*# sourceMappingURL=style.css.map */

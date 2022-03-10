@@ -1,0 +1,17 @@
+// Imports
+
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+// Font
+$bodyFont: Rubik, sans-serif;
+
+// Light Mode
+$lightColor: #fbfbfb;
+
+// Dark Mode
+$darkColor: #2d2d2d;
+$darkSearchColor: #2f2f2f;
+$darkLinkHover: rgba(255, 255, 255, .9);
+
+// Misc
+$searchWidth: 800px;
