@@ -1,7 +1,11 @@
-# Neumorphism-Startpage
-### Simple startpage with neumorphism elements, dark theme toggle.
+# Neumorphism Startpage
 
-### To Do:
+<p align="center">
+ <img src="https://i.imgur.com/NFMb37w.png" />
+ <img src="https://i.imgur.com/TXPx3Y7.png" />
+</p>
 
-- responsive design
-- finish dark mode toggle
+<h2>Live site: https://jack-lp.github.io/Neumorphism-Startpage/</h2>
+
+---
+
